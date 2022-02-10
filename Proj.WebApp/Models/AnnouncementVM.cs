@@ -7,5 +7,8 @@ namespace Proj.WebApp.Models
 {
     public class AnnouncementVM
     {
+        public int Id { get; set; }
+        public DateTime AnnounceDate { get; set; }
+        public string Text { get; set; }
     }
 }

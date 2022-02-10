@@ -6,6 +6,15 @@
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AnnounceDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Text)
+            </th>
             <th></th>
         </tr>
     </thead>
@@ -14,7 +23,6 @@
         <tr>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>

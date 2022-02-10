@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace Proj.WebApp.Controllers
 {
+    [Authorize]
     public class PlayerController : Controller 
     { 
 
@@ -172,6 +173,6 @@ namespace Proj.WebApp.Controllers
         }
 
         return RedirectToAction(nameof(Index));
+        }
     }
-}
 }

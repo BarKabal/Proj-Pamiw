@@ -24,46 +24,18 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Campaign" asp-action="Index">Kampanie</a>
                         </li>
-                        @{
-                            if (User.IsInRole("GM"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Session" asp-action="Index">Sesje</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Player" asp-action="Index">Gracze</a>
-                                </li>
-                            }
-                            else
-                            {
-                                <li class="nav-item">
-                                    <span style="color:darkgrey">Sesje</span>
-                                </li>
-                                <li class="nav-item">
-                                    <span style="color:darkgrey">Gracze</span>
-                                </li>
-                            }
-                        }
-                        @{
-                            if (SignInManager.IsSignedIn(User) && User.IsInRole("GM"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="ApplyForm" asp-action="Index">Zgłoszenia</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Announcement" asp-action="Index">Ogłoszenia</a>
-                                </li>
-                            }
-                            else if (SignInManager.IsSignedIn(User) && User.IsInRole("Player"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="ApplyForm" asp-action="Index">Moje Zgłoszenia</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Announcement" asp-action="Index">Ogłoszenia</a>
-                                </li>
-                            }
-                        }
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Session" asp-action="Index">Sesje</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Player" asp-action="Index">Gracze</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ApplyForm" asp-action="Index">Zgłoszenia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Announcement" asp-action="Index">Ogłoszenia</a>
+                        </li>
                         @if (SignInManager.IsSignedIn(User))
                         {
                             <li class="nav-link text-dark">
